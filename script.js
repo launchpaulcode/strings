@@ -104,7 +104,6 @@ const astuntosStringas = "Don't Be a Menace to South Central While Drinking Your
 let padalintiZodziai = astuntosStringas.split(" "); //padalinam stringa i stringu masyva su 14 nariu
 
 console.log(padalintiZodziai);
-
 console.log(zodziuIlgis(padalintiZodziai));
 
 
@@ -113,9 +112,35 @@ function zodziuIlgis(padalintiZodziai)  //bandom pakeist masyvo elementus i zodz
 {
     return padalintiZodziai.filter(padalintiZodziai => padalintiZodziai.length > 4)
 
+
 }
 
+padalintiZodziai = zodziuIlgis(padalintiZodziai)
+
 let arrayElementsLongerThanFive = padalintiZodziai.length;
-console.log(arrayElementsLongerThanFive);
+
+
+console.log(" There are " + arrayElementsLongerThanFive + " words longer than 5 symbols in the string");
+
+
+console.log("======================part 2==============================================")
+
+const stringNumberTwo =  "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale"; 
+let devidedWords = stringNumberTwo.split(" ");              //string division into an array
+console.log(devidedWords);                                  // console.log() string array
+console.log(filterOutTheWords(devidedWords));       // console.log() string array with elements longer than 5 symbols
+
+
+function filterOutTheWords(devidedWords)  //filtering out the array, leaving behind the symbols longer than 5 chars
+{
+    return devidedWords.filter(devidedWords => devidedWords.length > 4)
+
+}
+
+devidedWords = filterOutTheWords(devidedWords) //saving the function value
+
+let arrayElementsLongerThanFive2 = padalintiZodziai.length;
+
+console.log(" There are " + arrayElementsLongerThanFive2 + " words longer than 5 symbols in the string");
 
 
